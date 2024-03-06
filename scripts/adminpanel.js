@@ -72,7 +72,27 @@ function addRestaurants(){
             restaurants.push(restaurant)
             
 
-addBtn.addEventListener("click",function(){
+            newRestaurantContainer = document.createElement("div")
+            newRestaurantContainer.className = "restaurant-container flex"
+            newRestaurantContainer.innerHTML = `<ul>
+            <li>Name: ${restaurant.name}</li>
+            <li>Location: ${restaurant.location}</li>
+            <li>Feature: ${restaurant.feature}</li>
+        </ul>
+        <button class="delete-btn">Delete</button>`
+
+        adminRestaurant.appendChild(newRestaurantContainer)
+        }
+    
+
+}
+adminRestaurant.addEventListener("click", function(e){
+    if(e.target.tagName == "BUTTON"){
+        e.target.parentNode.remove()
+    }
+})
+
+addUserBtn.addEventListener("click",function(){
     addUser()
 })
 
