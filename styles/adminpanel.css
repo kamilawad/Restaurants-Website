@@ -1,9 +1,8 @@
-h1{
-    width: 20%;
-    height: 50px;
+.admin-container{
     background-color: gray;
-    text-align: center;
-    padding-top: 10px;
+    height: 100vh;
+    min-width: fit-content;   
+    font-family: sans-serif;
 }
 .container{
     width: 70%;
