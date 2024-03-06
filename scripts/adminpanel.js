@@ -2,7 +2,12 @@ const addUserBtn = document.getElementById("add-user")
 const adminUser = document.querySelector(".admin-user-wrapper")
 const userInput = document.getElementById("add-input")
 const userPasswordInput = document.getElementById("add-password")
-const restaurantName = document.getElementById("name-input")
+const restaurantNameInput = document.getElementById("name-input")
+const adminRestaurant = document.querySelector(".admin-restaurant-wrapper")
+const addRestaurantBtn = document.getElementById("add-restaurant")
+const restaurantLocationInput = document.getElementById("location-input")
+const restaurantfeaturesInput = document.getElementById("features-input")
+
 
 
 const users = []
