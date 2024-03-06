@@ -14,7 +14,7 @@ function addUser(){
     const user_name = userInput.value
     const password = userPasswordInput.value
 
-    if(user_name !== ""){
+    if(user_name !== "" && userPasswordInput !== "" ){
         const user = {
             username : user_name
         }
