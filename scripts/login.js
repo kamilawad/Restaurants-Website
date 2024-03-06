@@ -54,21 +54,23 @@ const validateAdminLogin = () => {
 
 
 const switchToSignup = () => {
-  if (login_switch.innerText === "Sign-Up") {
-    login_header.innerText = "Sign Up"
-    have_account.innerText = "Already have an account?"
-    login_switch.innerText = "Log-In"
-    login_btn.innerText = "SignUp"
-  }
+  login_header.innerText = "Sign Up"
+  have_account.innerText = "Already have an account?"
+  login_switch.innerText = "Log-In"
+  login_btn.innerText = "SignUp"
 }
 
 const switchToLogin = () => {
-  if (login_switch.innerText === "Log-In") {
-    login_header.innerText = "Log In"
-    have_account.innerText = "Don't have an account?"
-    login_switch.innerText = "Sign-Up"
-    login_btn.innerText = "LogIn"
-  }
+  login_header.innerText = "Log In"
+  have_account.innerText = "Don't have an account?"
+  login_switch.innerText = "Sign-Up"
+  login_btn.innerText = "LogIn"
+}
+
+const loginSignupToggle = () => {
+  if (login_switch.innerText === "Sign-Up") {
+    switchToSignup()
+  } else { switchToLogin() }
 }
 
 const checkLoginOrSignup = () => {
@@ -84,6 +86,5 @@ login_btn.addEventListener("click", (event) => {
 })
 
 login_switch.addEventListener("click", () => {
-  switchToSignup()
-  // switchToLogin()
+  loginSignupToggle()
 })
