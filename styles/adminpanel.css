@@ -28,3 +28,10 @@
     
 
 }
+.users-container{
+    background-color: rgb(80, 80, 80);
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+}
