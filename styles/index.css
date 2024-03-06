@@ -76,3 +76,18 @@
   margin-top: 35px;
   background-color: rgba(255, 107, 0, 1);
 }
+
+.handle-incorrect{
+  width: 100%;
+  padding-left: 25px;
+  color: rgba(255, 0, 0, 0.69);
+
+}
+
+.handle-incorrect p{
+  font-size: medium;
+}
+
+.hidden{
+  visibility: hidden;
+}

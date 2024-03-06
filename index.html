@@ -15,7 +15,10 @@
 <body>
   <div class="flex center log-in-container">
     <div class="flex center column login-wrapper">
-      <h1 class="white">Log in</h1>
+      <h1 class="white" id="login-heading">Log in</h1>
+      <div class="flex justify-start handle-incorrect hidden">
+        <p id="incorrect-error">Incorrect Usename or password</p>
+      </div>
       <div class="input-box">
         <input type="text" placeholder="Username" id="input-Username">
         <i class="fa-solid fa-user primary-color"></i>
@@ -25,9 +28,9 @@
         <i class="fa-solid fa-lock primary-color"></i>
       </div>
       <div class="flex justify-start log-in-text">
-        <p class="white">Don't have an account? <a class="primary-color" href="">Sign-Up</a></p>
+        <p class="white" id="have-account">Don't have an account? <a class="primary-color" href="#" id="login-switch">Sign-Up</a></p>
       </div>
-      <button class="white log-in-btn" id="btn">Login</button>
+      <button class="white log-in-btn" id="login-btn">Login</button>
     </div>
   </div>
 </body>
