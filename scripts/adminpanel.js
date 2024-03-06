@@ -96,3 +96,7 @@ addUserBtn.addEventListener("click",function(){
     addUser()
 })
 
+addRestaurantBtn.addEventListener("click",function(){
+    addRestaurants()
+})
+
