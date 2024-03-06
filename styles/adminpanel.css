@@ -44,3 +44,8 @@
     margin: 10px 0;
 }
 
+.user-heading{
+    background-color: aquamarine;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
