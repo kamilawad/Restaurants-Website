@@ -1,6 +1,7 @@
 const addBtn = document.getElementById("add-user")
 const adminUser = document.querySelector(".admin-user-wrapper")
 const userInput = document.getElementById("add-input")
+const userPasswordInput = document.getElementById("add-password")
 
 
 const users = []
