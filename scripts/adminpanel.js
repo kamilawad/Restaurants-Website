@@ -57,6 +57,20 @@ adminUser.addEventListener("click", function(element){
 })
 
 
+function addRestaurants(){
+        const restaurantName = restaurantNameInput.value
+        const restaurantLocation = restaurantLocationInput.value
+        const restaurantfeatures = restaurantfeaturesInput.value
+
+        if(restaurantName !== ""){
+            const restaurant = {
+                name: restaurantName,
+                location: restaurantLocation,
+                feature : restaurantfeatures
+
+            }
+            restaurants.push(restaurant)
+            
 
 addBtn.addEventListener("click",function(){
     addUser()
