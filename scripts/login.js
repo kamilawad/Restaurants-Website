@@ -54,13 +54,16 @@ const validateAdminLogin = () => {
       window.location.href = "./scripts/adminpanel.js"
 
     } else { incorrect.classList.remove("hidden") }
+
   } else { validateUserLogin(username, password) }
 }
 
 const validateUserSignup = (username, password) => {
   incorrect.innerText = "User Already Exists"
+
   if (username !== admin.username) {
     let found = false
+
     for (let i = 0; i < users.length; i++) {
       if (username === users[i].username) {
         incorrect.classList.remove("hidden")
@@ -76,7 +79,6 @@ const validateUserSignup = (username, password) => {
       saveUsers()
       window.location.href = "./scripts/main.js"
     }
-
   } else { incorrect.classList.remove("hidden") }
 }
 
@@ -89,13 +91,13 @@ const checkInputIfEmpty = (username, password) => {
 const validateSignup = () => {
   const username = input_username.value
   const password = input_password.value
+
   if (!checkInputIfEmpty(username, password)) {
     validateUserSignup(username, password)
   } else {
     incorrect.innerText = "Please Fill Both Username And Password"
     incorrect.classList.remove("hidden")
   }
-
 }
 
 const switchToSignup = () => {
@@ -126,6 +128,7 @@ const loginSignupToggle = () => {
 
 const checkLoginOrSignup = () => {
   incorrect.classList.add("hidden")
+
   setTimeout(() => {
     if (login_btn.innerText === "Login") {
       validateAdminLogin()
@@ -133,10 +136,9 @@ const checkLoginOrSignup = () => {
       validateSignup()
     }
   }, 100)
-
 }
 
-login_btn.addEventListener("click", (event) => {
+login_btn.addEventListener("click", () => {
   checkLoginOrSignup()
 })
 
