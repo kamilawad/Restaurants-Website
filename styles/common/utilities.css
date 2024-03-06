@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -30,4 +30,8 @@
 
 .column {
   flex-direction: column;
+}
+
+.justify-start{
+  justify-content: start;
 }
