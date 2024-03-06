@@ -2,10 +2,11 @@ const addBtn = document.getElementById("add-user")
 const adminUser = document.querySelector(".admin-user-wrapper")
 const userInput = document.getElementById("add-input")
 const userPasswordInput = document.getElementById("add-password")
+const restaurantName = document.getElementById("name-input")
 
 
 const users = []
-const restaurants = [{
+const restaurants = []
 
 }]
 let newUserContainer;
