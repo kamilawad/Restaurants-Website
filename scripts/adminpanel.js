@@ -16,7 +16,8 @@ function addUser(){
 
     if(user_name !== "" && userPasswordInput !== "" ){
         const user = {
-            username : user_name
+            username : user_name,
+            pass : password
         }
         users.push(user)
   
