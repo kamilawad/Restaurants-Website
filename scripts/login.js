@@ -52,14 +52,19 @@ const validateAdminLogin = () => {
   } else { validateUserLogin(username, password) }
 }
 
+const checkInputIfEmpty = (username, password) => {
+  if (username === "" || password === "") {
+    return true
+  } return false
+}
 
 const validateSignup = () => {
   const username = input_username.value
   const password = input_password.value
-
+  if (!checkInputIfEmpty()) { }
   if (username !== admin.username) {
     for (let i = 0; i < users.length; i++) {
-      if (username !== users[i].username) {
+      if (username === users[i].username) {
         users.push({
           username: username,
           password: password
