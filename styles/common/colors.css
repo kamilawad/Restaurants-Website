@@ -1,15 +1,7 @@
-.primary-bg {
-  background-color: #333;
-}
-
-.white-bg {
-  background-color: white;
-}
-
-.primary-text {
-  color: #333;
-}
-
-.white-text {
+.white {
   color: white;
+}
+
+.primary-color{
+ color: rgba(255, 107, 0, 1)
 }
