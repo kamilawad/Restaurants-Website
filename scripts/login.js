@@ -53,6 +53,15 @@ const validateAdminLogin = () => {
 }
 
 
+const switchToSignup = () => {
+  if (login_switch.innerText === "Sign-Up") {
+    login_header.innerText = "Sign Up"
+    have_account.innerText = "Already have an account?"
+    login_switch.innerText = "Log-In"
+    login_btn.innerText = "SignUp"
+  }
+}
+
 const checkLoginOrSignup = () => {
   if (login_btn.innerText === "Login") {
     validateAdminLogin()
@@ -66,5 +75,6 @@ login_btn.addEventListener("click", (event) => {
 })
 
 login_switch.addEventListener("click", () => {
-
+  switchToSignup()
+  // switchToLogin()
 })
