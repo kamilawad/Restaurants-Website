@@ -31,7 +31,7 @@ function addUser(){
 
     adminUser.appendChild(newUserContainer)
     userInput.value = ""
-    userPasswordInput = ""
+    userPasswordInput.value = ""
 
 
     }
