@@ -11,3 +11,11 @@
     padding: 10px 20px;
     margin-bottom: 20px;
 }
+.admin-restaurants-container{
+    background-color: aqua;
+    width: 100%;
+    min-width: fit-content;
+    padding: 10px 20px;
+    
+
+}
