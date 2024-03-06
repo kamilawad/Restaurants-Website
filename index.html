@@ -10,22 +10,24 @@
   <link rel="stylesheet" href="./styles/common/utilities.css">
   <link rel="stylesheet" href="./styles/common/colors.css">
   <link rel="stylesheet" href="./styles/index.css">
-  <title>Document</title>
+  <title>Log-in</title>
 </head>
 <body>
-  <div class="log-in-container">
-    <div class="login wrapper">
-      <h1>Log in</h1>
+  <div class="flex center log-in-container">
+    <div class="flex center column login-wrapper">
+      <h1 class="white">Log in</h1>
       <div class="input-box">
-        <input class="white" type="text" placeholder="Username" id="Username">
-        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Username" id="input-Username">
+        <i class="fa-solid fa-user primary-color"></i>
       </div>
       <div class="input-box">
-        <input  class="white" type="password" placeholder="Password" id="password">
-        <i class="fa-solid fa-lock"></i>
-        <p>Don't have an account? <span>Sign-Up</span></p>
+        <input type="password" placeholder="Password" id="input-password">
+        <i class="fa-solid fa-lock primary-color"></i>
       </div>
-      <button class="button" id="btn">Login</button>
+      <div class="flex justify-start log-in-text">
+        <p class="white">Don't have an account? <a class="primary-color" href="">Sign-Up</a></p>
+      </div>
+      <button class="white log-in-btn" id="btn">Login</button>
     </div>
   </div>
 </body>
