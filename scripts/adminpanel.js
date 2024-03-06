@@ -38,9 +38,11 @@ function addUser(){
         newUserContainer.innerHTML = `<p>Username: ${user.username} Password: ${user.pass}</p>
                                         <button class="delete-btn">Delete</button>`
                                     
-    adminUser.appendChild(newUserContainer)
-    userInput.value = ""
-    userPasswordInput.value = ""
+        
+
+        adminUser.appendChild(newUserContainer)
+        userInput.value = ""
+        userPasswordInput.value = ""
 
 
     }
