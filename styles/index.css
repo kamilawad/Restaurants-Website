@@ -77,6 +77,11 @@
   background-color: rgba(255, 107, 0, 1);
 }
 
+.log-in-btn:hover{
+  cursor: pointer;
+  opacity: 80%;
+}
+
 .handle-incorrect{
   width: 100%;
   padding-left: 25px;

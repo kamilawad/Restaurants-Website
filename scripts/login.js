@@ -6,20 +6,37 @@ const have_account = document.getElementById("have-account")
 const login_switch = document.getElementById("login-switch")
 const login_btn = document.getElementById("login-btn")
 
-const users = []
+const users = [{
+  username: "ali",
+  password: "1"
+}]
 const admin = {
   username: "admin",
   password: "1234"
 }
 
+const logger = (param) => console.log(param)
+
+logger(login_btn.innerText)
 
 const validateUserLogin = (username, password) => {
-  for (let i = 0; i < users.length; i++) {
-    if (username === users[i].name) {
-      if (password === users[i].password) {
-        window.location = "./scripts/main.js"
-      } else { incorrect.classList.remove("hidden") }
-    } else { incorrect.classList.remove("hidden") }
+  let found = false
+
+  if (users.length === 0) {
+    incorrect.classList.remove("hidden")
+  } else {
+    for (let i = 0; i < users.length; i++) {
+      if (username === users[i].username) {
+        found = true
+
+        if (password === users[i].password) {
+          window.location.href = "./scripts/main.js"
+        } else {
+          incorrect.classList.remove("hidden")
+          break
+        }
+      }
+    } if (!found) { incorrect.classList.remove("hidden") }
   }
 }
 
@@ -27,13 +44,27 @@ const validateAdminLogin = () => {
   const username = input_username.value
   const password = input_password.value
 
-  if (username === "admin") {
-    if (password === "1234") {
-      window.location = "./scripts/adminpanel.js"
+  if (username === admin.username) {
+    if (password === admin.password) {
+      window.location.href = "./scripts/adminpanel.js"
+
     } else { incorrect.classList.remove("hidden") }
+  } else { validateUserLogin(username, password) }
+}
+
+
+const checkLoginOrSignup = () => {
+  if (login_btn.innerText === "Login") {
+    validateAdminLogin()
   } else {
-    validateUserLogin()
+    validateSignup()
   }
 }
 
-login_btn.addEventListener("click", validateAdminLogin)
+login_btn.addEventListener("click", (event) => {
+  checkLoginOrSignup()
+})
+
+login_switch.addEventListener("click", () => {
+
+})
