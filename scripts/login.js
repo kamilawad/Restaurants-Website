@@ -1,5 +1,5 @@
 const login_header = document.getElementById("login-heading")
-const input_username = document.getElementById("input-Username")
+const input_username = document.getElementById("input-username")
 const input_password = document.getElementById("input-password")
 const incorrect = document.getElementById("incorrect-error")
 const have_account = document.getElementById("have-account")
@@ -14,8 +14,8 @@ const admin = {
 }
 
 function loadUsers() {
-  const usersJSON = localStorage.getItem("users");
-  return usersJSON ? JSON.parse(usersJSON) : [];
+  const users_JSON = localStorage.getItem("users");
+  return users_JSON ? JSON.parse(users_JSON) : [];
 }
 
 const saveUsers = () => {
@@ -34,6 +34,7 @@ const validateUserLogin = (username, password) => {
 
         if (password === users[i].password) {
           window.location.href = "./scripts/main.js"
+          break
         } else {
           incorrect.classList.remove("hidden")
           break
@@ -118,7 +119,7 @@ const switchToLogin = () => {
   incorrect.classList.add("hidden")
 }
 
-const loginSignupToggle = () => {
+const toggleLoginSignup = () => {
   if (login_switch.innerText === "Sign-Up") {
     switchToSignup()
   } else {
@@ -143,5 +144,5 @@ login_btn.addEventListener("click", () => {
 })
 
 login_switch.addEventListener("click", () => {
-  loginSignupToggle()
+  toggleLoginSignup()
 })
