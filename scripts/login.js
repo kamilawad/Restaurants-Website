@@ -62,6 +62,15 @@ const switchToSignup = () => {
   }
 }
 
+const switchToLogin = () => {
+  if (login_switch.innerText === "Log-In") {
+    login_header.innerText = "Log In"
+    have_account.innerText = "Don't have an account?"
+    login_switch.innerText = "Sign-Up"
+    login_btn.innerText = "LogIn"
+  }
+}
+
 const checkLoginOrSignup = () => {
   if (login_btn.innerText === "Login") {
     validateAdminLogin()
