@@ -25,7 +25,7 @@ function addUser(){
 
     newUserContainer = document.createElement("div");
     newUserContainer.className = 'users-container flex';
-    newUserContainer.innerHTML = `<p>Username:${user.username}</p>
+    newUserContainer.innerHTML = `<p>Username: ${user.username} Password : ${user.pass}</p>
                                     <button class="delete-btn">Delete</button>`
 
     adminUser.appendChild(newUserContainer)
