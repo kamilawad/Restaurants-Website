@@ -13,19 +13,27 @@ const admin = {
 }
 
 
-const validateAdminLogin = () => {
-  const username = input_username.value
-  const password = input_password.value
-  cons
-  if (username === "admin") {
-    if (password === "1234") {
-      window.location = "./scripts/main.js"
-    } else {
-      incorrect.classList.remove("hidden")
-    }
-  } else {
-    checkuser()
+const validateUserLogin = (username, password) => {
+  for (let i = 0; i < users.length; i++) {
+    if (username === users[i].name) {
+      if (password === users[i].password) {
+        window.location = "./scripts/main.js"
+      } else { incorrect.classList.remove("hidden") }
+    } else { incorrect.classList.remove("hidden") }
   }
 }
 
-login_btn.addEventListener("click")
+const validateAdminLogin = () => {
+  const username = input_username.value
+  const password = input_password.value
+
+  if (username === "admin") {
+    if (password === "1234") {
+      window.location = "./scripts/adminpanel.js"
+    } else { incorrect.classList.remove("hidden") }
+  } else {
+    validateUserLogin()
+  }
+}
+
+login_btn.addEventListener("click", validateAdminLogin)
