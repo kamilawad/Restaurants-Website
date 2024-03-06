@@ -12,6 +12,7 @@ let newUserContainer;
 
 function addUser(){
     const user_name = userInput.value
+    const password = userPasswordInput.value
 
     if(user_name !== ""){
         const user = {
