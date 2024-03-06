@@ -15,6 +15,10 @@ const restaurants = []
 
 }]
 let newUserContainer;
+let newRestaurantContainer;
+
+
+
 
 function addUser(){
     const user_name = userInput.value
