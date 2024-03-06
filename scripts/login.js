@@ -6,18 +6,21 @@ const have_account = document.getElementById("have-account")
 const login_switch = document.getElementById("login-switch")
 const login_btn = document.getElementById("login-btn")
 
-const users = [{
-  username: "ali",
-  password: "1"
-}]
+let users = loadUsers()
+
 const admin = {
   username: "admin",
   password: "1234"
 }
 
-const logger = (param) => console.log(param)
+function loadUsers() {
+  const usersJSON = localStorage.getItem("users");
+  return usersJSON ? JSON.parse(usersJSON) : [];
+}
 
-logger(login_btn.innerText)
+const saveUsers = () => {
+  localStorage.setItem("users", JSON.stringify(users))
+}
 
 const validateUserLogin = (username, password) => {
   let found = false
@@ -54,7 +57,6 @@ const validateAdminLogin = () => {
   } else { validateUserLogin(username, password) }
 }
 
-
 const validateUserSignup = (username, password) => {
   incorrect.innerText = "User Already Exists"
   if (username !== admin.username) {
@@ -71,6 +73,7 @@ const validateUserSignup = (username, password) => {
         username: username,
         password: password
       })
+      saveUsers()
       window.location.href = "./scripts/main.js"
     }
 
