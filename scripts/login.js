@@ -53,11 +53,33 @@ const validateAdminLogin = () => {
 }
 
 
+const validateSignup = () => {
+  const username = input_username.value
+  const password = input_password.value
+
+  if (username !== admin.username) {
+    for (let i = 0; i < users.length; i++) {
+      if (username !== users[i].username) {
+        users.push({
+          username: username,
+          password: password
+        })
+        window.location.href = "./scripts/main.js"
+      } else {
+        incorrect.classList.remove("hidden")
+        break
+      }
+    }
+  } else { incorrect.classList.remove("hidden") }
+}
+
 const switchToSignup = () => {
   login_header.innerText = "Sign Up"
   have_account.innerText = "Already have an account?"
   login_switch.innerText = "Log-In"
   login_btn.innerText = "SignUp"
+  incorrect.innerText = "User Already Exists"
+  incorrect.classList.add("hidden")
 }
 
 const switchToLogin = () => {
@@ -65,6 +87,8 @@ const switchToLogin = () => {
   have_account.innerText = "Don't have an account?"
   login_switch.innerText = "Sign-Up"
   login_btn.innerText = "LogIn"
+  incorrect.innerText = "Incorrect Usename or Password"
+  incorrect.classList.add("hidden")
 }
 
 const loginSignupToggle = () => {
