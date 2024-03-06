@@ -36,7 +36,9 @@ const validateUserLogin = (username, password) => {
           break
         }
       }
-    } if (!found) { incorrect.classList.remove("hidden") }
+    } if (!found) {
+      incorrect.classList.remove("hidden")
+    }
   }
 }
 
@@ -52,6 +54,29 @@ const validateAdminLogin = () => {
   } else { validateUserLogin(username, password) }
 }
 
+
+const validateUserSignup = (username, password) => {
+  incorrect.innerText = "User Already Exists"
+  if (username !== admin.username) {
+    let found = false
+    for (let i = 0; i < users.length; i++) {
+      if (username === users[i].username) {
+        incorrect.classList.remove("hidden")
+        found = true
+        break
+      }
+    }
+    if (!found) {
+      users.push({
+        username: username,
+        password: password
+      })
+      window.location.href = "./scripts/main.js"
+    }
+
+  } else { incorrect.classList.remove("hidden") }
+}
+
 const checkInputIfEmpty = (username, password) => {
   if (username === "" || password === "") {
     return true
@@ -61,21 +86,13 @@ const checkInputIfEmpty = (username, password) => {
 const validateSignup = () => {
   const username = input_username.value
   const password = input_password.value
-  if (!checkInputIfEmpty()) { }
-  if (username !== admin.username) {
-    for (let i = 0; i < users.length; i++) {
-      if (username === users[i].username) {
-        users.push({
-          username: username,
-          password: password
-        })
-        window.location.href = "./scripts/main.js"
-      } else {
-        incorrect.classList.remove("hidden")
-        break
-      }
-    }
-  } else { incorrect.classList.remove("hidden") }
+  if (!checkInputIfEmpty(username, password)) {
+    validateUserSignup(username, password)
+  } else {
+    incorrect.innerText = "Please Fill Both Username And Password"
+    incorrect.classList.remove("hidden")
+  }
+
 }
 
 const switchToSignup = () => {
@@ -92,22 +109,28 @@ const switchToLogin = () => {
   have_account.innerText = "Don't have an account?"
   login_switch.innerText = "Sign-Up"
   login_btn.innerText = "LogIn"
-  incorrect.innerText = "Incorrect Usename or Password"
+  incorrect.innerText = "Incorrect Username or Password"
   incorrect.classList.add("hidden")
 }
 
 const loginSignupToggle = () => {
   if (login_switch.innerText === "Sign-Up") {
     switchToSignup()
-  } else { switchToLogin() }
+  } else {
+    switchToLogin()
+  }
 }
 
 const checkLoginOrSignup = () => {
-  if (login_btn.innerText === "Login") {
-    validateAdminLogin()
-  } else {
-    validateSignup()
-  }
+  incorrect.classList.add("hidden")
+  setTimeout(() => {
+    if (login_btn.innerText === "Login") {
+      validateAdminLogin()
+    } else {
+      validateSignup()
+    }
+  }, 100)
+
 }
 
 login_btn.addEventListener("click", (event) => {
