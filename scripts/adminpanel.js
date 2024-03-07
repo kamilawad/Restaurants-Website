@@ -112,3 +112,23 @@ addRestaurantBtn.addEventListener("click",function(){
     addRestaurants()
 })
 
+
+function switchTabs(tabId) {
+    
+    if (tabId === "user-panel") {
+        adminUsersContainer.style.display = "block";
+        adminRestaurantsContainer.style.display = "none";
+    } else if (tabId === "restaurant-panel") {
+        adminUsersContainer.style.display = "none";
+        adminRestaurantsContainer.style.display = "block";
+    }
+}
+
+tabs.addEventListener("click", function(event) {
+    if (event.target.tagName === "BUTTON") {
+        const tabId = event.target.id;
+        
+        switchTabs(tabId);
+    }
+});
+
