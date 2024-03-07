@@ -1,0 +1,133 @@
+.header{
+  padding: 30px 40px;
+}
+
+.menu-nav{
+  padding-right: 25px;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: rgb(84, 84, 84);
+  font-size: 24px;
+  margin-right: 25px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.menu-nav a:hover{
+  border-bottom: solid 3px rgba(255, 107, 0, 1);
+  transition: 0.3s;
+}
+
+.fa-user, .fa-bars{
+  font-size: 46px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.fa-bars{
+  display: None;
+}
+
+.profile-wrapper{
+  font-size: 24px;
+  color: rgb(84, 84, 84);
+}
+
+.menu-container{
+  padding: 35px 50px;
+  gap: 35px;
+  background-color: rgb(89, 89, 89);
+}
+
+.menu-card-info{
+  display: flex;
+  justify-content: space-between;
+  color: rgb(29, 29, 29);
+  font-weight: bold;
+}
+
+.menu-card-info{
+  padding: 10px 10px;
+  font-size: 25px;
+}
+
+.menu-card{
+  min-width: none;
+  width: fit-content;
+  max-width: 440px;
+  border-radius: 10px;
+  background-color: rgba(255, 106, 0, 0.822)
+}
+
+.menu-card:hover{
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  scale: 1.02;
+  cursor: pointer;
+}
+
+.menu-card img{
+  width: 350px;
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .menu-nav, .profile-wrapper{
+    display: none;
+  }
+
+  .header{
+    padding: 30px 10px;
+  }
+
+  .fa-bars{
+    display: block;
+  }
+}
+
+.footer-container{
+  min-height: 200px;
+  padding: 30px 40px 20px 40px;
+  background-color: rgb(48, 48, 48);
+}
+
+.copy-rights{
+  font-size: 12px;
+}
+
+.footer-nav{
+  margin-top: 30px;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.footer-nav a:hover{
+  border-bottom: solid 3px rgba(255, 107, 0, 1);
+  transition: 0.3s;
+}
+
+.follow-us{
+  gap: 15px;
+}
+
+.follow-us h2{
+  font-size: 36px;
+}
+
+.footer-icons{
+  gap: 10px;
+}
+
+.fa-brands{
+  font-size: 24px; 
+}

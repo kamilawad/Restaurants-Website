@@ -35,3 +35,23 @@
 .justify-start{
   justify-content: start;
 }
+
+.space-between{
+  justify-content: space-between;
+}
+
+.space-around{
+  justify-content: space-around;
+}
+
+.align-end{
+  align-items: end;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
