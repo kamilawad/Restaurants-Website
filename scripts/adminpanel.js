@@ -20,6 +20,9 @@ const restaurants = []
 let newUserContainer;
 let newRestaurantContainer;
 
+adminUsersContainer.style.display = "block";
+adminRestaurantsContainer.style.display = "none";
+
 
 
 
