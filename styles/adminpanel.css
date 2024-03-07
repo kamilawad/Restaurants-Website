@@ -1,11 +1,17 @@
+/* body{
+    background-image: url(../assets/admin-panel.jpeg);
+    position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+} */
 .admin-container{
-    background-color: gray;
+    /* background-color: gray; */
     height: 100vh;
     min-width: fit-content;   
     font-family: sans-serif;
 }
 .admin-users-container{
-    background-color: aqua;
+    background-color:gray;
     width: 100%;
     min-width: fit-content;
     padding: 10px 20px;
@@ -14,7 +20,7 @@
     border-top-left-radius: 0;
 }
 .admin-restaurants-container{
-    background-color: aqua;
+    background-color: gray;
     width: 100%;
     min-width: fit-content;
     padding: 10px 20px;
@@ -25,7 +31,8 @@
 }
 .admin-user-wrapper{
     
-    background-color: rgba(255, 107, 0, 1);
+    background-color: white;
+    
     padding: 10px 10px;
     border-radius: 25px;
     gap: 10px;
@@ -33,7 +40,7 @@
 
 }
 .users-container{
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(175, 174, 174);
     padding: 10px 20px;
     align-items: center;
     justify-content: space-between;
@@ -43,19 +50,19 @@
     padding: 10px 20px ;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(80, 80, 80);
-    border-radius: 40px;
+    background-color: rgb(175, 174, 174);
+    border-radius: 20px;
     
 }
 
 .user-heading{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     justify-content: space-between;
     padding: 15px 15px;
 }
 
 .restaurant-heading{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     justify-content: space-between;
     padding: 15px 15px;
     font-size: 15px;
@@ -70,6 +77,7 @@ p{
     font-weight: bold;
     
     
+    
 }
 
 .delete-btn{
@@ -82,6 +90,9 @@ p{
 }
 .add-btn{
     background-color: blue;
+    outline: none;
+    border: none;
+    color: white;
     font-size: 16px;
     padding: 7px 20px;
     letter-spacing: 2px;
@@ -92,12 +103,12 @@ p{
 .admin-wrapper{
     width: 50%;
     min-width: fit-content;
-    background-color: blueviolet;
+    /* background-color: gray; */
     
 }
 .admin-restaurant-wrapper{
     
-    background-color: rgba(255, 107, 0, 1);
+    background-color: white;
     padding: 10px 10px;
     border-radius: 25px;
     gap: 10px;
@@ -111,25 +122,27 @@ input{
     outline: none;
 }
 
-.tab-btn{
-    /* background-color: khaki; */
-}
+
 .bttn-user{
     border-top-left-radius: 10px;
-    background-color: red;
+    border-top-right-radius: 10px;
+    background-color: rgb(158, 157, 157);
     border: none;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 20px;
+    color: white;
     font-weight: bold;
     
 }
 .bttn-restaurant{
     border-top-right-radius: 10px;
-    background-color: red;
+    border-top-left-radius: 10px;
+    background-color: rgb(158, 157, 157);
     border: none;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 20px;
+    color: white;
     font-weight: bold;
 }
