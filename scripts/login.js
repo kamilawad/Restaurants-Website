@@ -52,7 +52,7 @@ const validateAdminLogin = () => {
 
   if (username === admin.username) {
     if (password === admin.password) {
-      window.location.href = "./scripts/adminpanel.js"
+      window.location.href = "./pages/adminpanel.html"
 
     } else { incorrect.classList.remove("hidden") }
 
@@ -78,7 +78,7 @@ const validateUserSignup = (username, password) => {
         password: password
       })
       saveUsers()
-      window.location.href = "./scripts/main.js"
+      window.location.href = "./pages/main.html"
     }
   } else { incorrect.classList.remove("hidden") }
 }
