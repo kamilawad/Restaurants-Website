@@ -37,3 +37,7 @@
 .align-center{
   align-items: center;
 }
+
+.wrap{
+  flex-wrap: ;
+}
