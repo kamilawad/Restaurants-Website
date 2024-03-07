@@ -108,8 +108,8 @@ addUserBtn.addEventListener("click",function(){
 addRestaurantBtn.addEventListener("click",function(){
     addRestaurants()
 })
-// adminUsersContainer.style.display = "block";
-// adminRestaurantsContainer.style.display = "none";
+
+
 function switchTabs(tabId) {
     
     if (tabId === "user-panel") {
