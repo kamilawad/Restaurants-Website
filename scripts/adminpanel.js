@@ -7,6 +7,9 @@ const adminRestaurant = document.querySelector(".admin-restaurant-wrapper")
 const addRestaurantBtn = document.getElementById("add-restaurant")
 const restaurantLocationInput = document.getElementById("location-input")
 const restaurantfeaturesInput = document.getElementById("features-input")
+const tabs = document.getElementById("tab-box")
+const adminRestaurantsContainer= document.querySelector(".admin-restaurants-container")
+const adminUsersContainer = document.querySelector(".admin-users-container")
 
 
 
