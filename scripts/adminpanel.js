@@ -16,7 +16,6 @@ const adminUsersContainer = document.querySelector(".admin-users-container")
 const users = []
 const restaurants = []
 
-}]
 let newUserContainer;
 let newRestaurantContainer;
 
@@ -30,32 +29,27 @@ function addUser(){
     const user_name = userInput.value
     const password = userPasswordInput.value
 
-    if(user_name !== "" && userPasswordInput !== "" ){
+    if(user_name !== "" && password !== "" ){
         const user = {
             username : user_name,
             pass : password
         }
         users.push(user)
   
-    
-
         newUserContainer = document.createElement("div");
         newUserContainer.className = 'users-container flex';
         newUserContainer.innerHTML = `<p>Username: ${user.username} Password: ${user.pass}</p>
                                         <button class="delete-btn">Delete</button>`
                                     
-        
-
         adminUser.appendChild(newUserContainer)
         userInput.value = ""
         userPasswordInput.value = ""
-
-
     }
     else{
-
     }
 }
+
+
 adminUser.addEventListener("click", function(element){
     if(element.target.tagName === "BUTTON"){
         element.target.parentNode.remove()
@@ -68,7 +62,7 @@ function addRestaurants(){
         const restaurantLocation = restaurantLocationInput.value
         const restaurantfeatures = restaurantfeaturesInput.value
 
-        if(restaurantName !== ""){
+        if(restaurantName !== "" && restaurantLocation !== "" && restaurantfeatures !==""){
             const restaurant = {
                 name: restaurantName,
                 location: restaurantLocation,
@@ -95,9 +89,12 @@ function addRestaurants(){
         restaurantfeaturesInput.value = "";
 
         }
-    
+        
 
 }
+
+
+
 adminRestaurant.addEventListener("click", function(e){
     if(e.target.tagName == "BUTTON"){
         e.target.parentNode.remove()
@@ -111,8 +108,8 @@ addUserBtn.addEventListener("click",function(){
 addRestaurantBtn.addEventListener("click",function(){
     addRestaurants()
 })
-
-
+// adminUsersContainer.style.display = "block";
+// adminRestaurantsContainer.style.display = "none";
 function switchTabs(tabId) {
     
     if (tabId === "user-panel") {
