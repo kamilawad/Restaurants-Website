@@ -9,13 +9,17 @@
     width: 100%;
     min-width: fit-content;
     padding: 10px 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    border-radius: 15px;
+    border-top-left-radius: 0;
 }
 .admin-restaurants-container{
     background-color: aqua;
     width: 100%;
     min-width: fit-content;
     padding: 10px 20px;
+    border-radius: 15px;
+    border-top-left-radius: 0;
     
 
 }
@@ -39,9 +43,9 @@
     padding: 10px 20px ;
     align-items: center;
     justify-content: space-between;
-    background-color: bisque;
+    background-color: rgb(80, 80, 80);
     border-radius: 40px;
-    margin: 10px 0;
+    
 }
 
 .user-heading{
@@ -64,6 +68,8 @@ ul li {
 p{
     font-size: 15px;
     font-weight: bold;
+    
+    
 }
 
 .delete-btn{
@@ -86,6 +92,7 @@ p{
 .admin-wrapper{
     width: 50%;
     min-width: fit-content;
+    background-color: blueviolet;
     
 }
 .admin-restaurant-wrapper{
@@ -104,7 +111,9 @@ input{
     outline: none;
 }
 
-
+.tab-btn{
+    /* background-color: khaki; */
+}
 .bttn-user{
     border-top-left-radius: 10px;
     background-color: red;
