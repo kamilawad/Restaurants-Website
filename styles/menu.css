@@ -2,11 +2,9 @@
   padding: 30px 40px;
 }
 
-
 .menu-nav{
   padding-right: 25px;
 }
-
 
 .menu-nav a {
   text-decoration: none;
@@ -41,7 +39,6 @@
   padding: 35px 50px;
   gap: 35px;
   background-color: rgb(89, 89, 89);
-
 }
 
 .menu-card-info{
@@ -49,7 +46,6 @@
   justify-content: space-between;
   color: rgb(29, 29, 29);
   font-weight: bold;
-  
 }
 
 .menu-card-info{
@@ -58,7 +54,8 @@
 }
 
 .menu-card{
-  min-width: none;width: fit-content;
+  min-width: none;
+  width: fit-content;
   max-width: 440px;
   border-radius: 10px;
   background-color: rgba(255, 106, 0, 0.822)
@@ -91,3 +88,46 @@
   }
 }
 
+.footer-container{
+  min-height: 200px;
+  padding: 30px 40px 20px 40px;
+  background-color: rgb(48, 48, 48);
+}
+
+.copy-rights{
+  font-size: 12px;
+}
+
+.footer-nav{
+  margin-top: 30px;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.footer-nav a:hover{
+  border-bottom: solid 3px rgba(255, 107, 0, 1);
+  transition: 0.3s;
+}
+
+.follow-us{
+  gap: 15px;
+}
+
+.follow-us h2{
+  font-size: 36px;
+}
+
+.footer-icons{
+  gap: 10px;
+}
+
+.fa-brands{
+  font-size: 24px; 
+}
