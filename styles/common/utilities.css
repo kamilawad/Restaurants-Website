@@ -14,16 +14,6 @@
   align-items: center;
 }
 
-.space-between{
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flex-space-around {
-  justify-content: space-around;
-  align-items: center;
-}
-
 .row {
   flex-direction: row;
 }
