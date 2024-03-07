@@ -104,3 +104,23 @@ input{
     outline: none;
 }
 
+
+.bttn-user{
+    border-top-left-radius: 10px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.bttn-restaurant{
+    border-top-right-radius: 10px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
