@@ -9,31 +9,25 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+  />
     <title>Home Page</title>
 </head>
 <body>
-    <header>
-        <div class="flex space-between nav-bar">
-            <div class="logo flex"><h1>Taste Track</h1></div>
-            <nav class="flex nav-items">
-                <a href="#">Home</a>
-                <a href="#">Discover</a>
-                <a href="#">Contact</a>
-                <a href="#">About us</a>
-            </nav>
-            <div class="flex column profile-button center nav-profile">
-                <i class="fa-solid fa-user"></i>
-                <p id="username">Profile</p>
-            </div>
-
-            <div class="flex nav-bars">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+    <header class="flex space-between header">
+        <h1 class="brand primary-color">Taste Track</h1>
+        <nav class="flex align-end menu-nav">
+          <a href="#">Home</a>
+          <a href="#">Discover</a>
+          <a href="#">Contact</a>
+          <a href="#">About Us</a>
+        </nav>
+        <div class="flex column align-center profile-wrapper"> 
+          <i class="fa-solid fa-user primary-color"></i>
+          <p>Profile</p>
         </div>
     </header>
 
-    <section class="hero-section flex column space-between">
+    <section class="hero-section flex column space-between align-center">
         <div class="flex column center hero-heading-container">
             <h1>Discover Delight :</h1>
             <h1 class="hero-heading">Where Every Bite  Tells A Story</h1>
