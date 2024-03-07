@@ -88,6 +88,12 @@ function addRestaurants(){
         <button class="delete-btn">Delete</button>`
 
         adminRestaurant.appendChild(newRestaurantContainer)
+
+
+        restaurantLocationInput.value = "";
+        restaurantNameInput.value = "";
+        restaurantfeaturesInput.value = "";
+
         }
     
 
