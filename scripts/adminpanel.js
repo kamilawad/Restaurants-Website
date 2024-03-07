@@ -34,11 +34,13 @@ function addUser(){
             username : user_name,
             pass : password
         }
+        
         users.push(user)
+        
   
         newUserContainer = document.createElement("div");
         newUserContainer.className = 'users-container flex';
-        newUserContainer.innerHTML = `<p>Username: ${user.username} Password: ${user.pass}</p>
+        newUserContainer.innerHTML = `<p style = color : "white">Username: ${user.username}</p> <p>Password: ${user.pass}</p>
                                         <button class="delete-btn">Delete</button>`
                                     
         adminUser.appendChild(newUserContainer)
@@ -108,8 +110,8 @@ addUserBtn.addEventListener("click",function(){
 addRestaurantBtn.addEventListener("click",function(){
     addRestaurants()
 })
-// adminUsersContainer.style.display = "block";
-// adminRestaurantsContainer.style.display = "none";
+
+
 function switchTabs(tabId) {
     
     if (tabId === "user-panel") {
