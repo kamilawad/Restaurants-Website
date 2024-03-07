@@ -88,3 +88,12 @@ p{
     min-width: fit-content;
     
 }
+.admin-restaurant-wrapper{
+    
+    background-color: rgba(255, 107, 0, 1);
+    padding: 10px 10px;
+    border-radius: 25px;
+    gap: 10px;
+    
+
+}
