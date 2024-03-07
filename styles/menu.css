@@ -1,0 +1,35 @@
+.header{
+  padding: 30px 40px;
+}
+
+
+.menu-nav{
+  padding-right: 25px;
+}
+
+
+.menu-nav a {
+  text-decoration: none;
+  color: rgb(84, 84, 84);
+  font-size: 24px;
+  margin-right: 15px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.menu-nav a:hover{
+  border-bottom: solid 3px rgba(255, 107, 0, 1);
+  transition: 0.3s;
+}
+
+.fa-user{
+  font-size: 46px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.profile-wrapper{
+
+  font-size: 24px;
+  color: rgb(84, 84, 84);
+}

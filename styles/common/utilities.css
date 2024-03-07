@@ -25,3 +25,15 @@
 .justify-start{
   justify-content: start;
 }
+
+.space-between{
+  justify-content: space-between;
+}
+
+.align-end{
+  align-items: end;
+}
+
+.align-center{
+  align-items: center;
+}
