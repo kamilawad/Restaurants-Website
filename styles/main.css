@@ -1,57 +1,52 @@
-body header {
-  padding: 20px;
+.header{
+  padding: 30px 40px;
 }
 
-.nav-bar {
-  padding: 20px;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
-  /*box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.1);*/
+.menu-nav{
+  padding-right: 25px;
 }
 
-.logo {
+.menu-nav a {
   text-decoration: none;
+  color: rgb(84, 84, 84);
+  font-size: 24px;
+  margin-right: 25px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
 }
 
-.nav-items a {
-  padding: 15px;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
+.menu-nav a:hover{
+  border-bottom: solid 3px rgba(255, 107, 0, 1);
+  transition: 0.3s;
 }
 
-.nav-items a:hover{
-  color: rgba(255, 107, 0, 1);
+.fa-user, .fa-bars{
+  font-size: 46px;
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 
-.nav-bars:hover {
-  color: rgba(255, 107, 0, 1);
-}
-
-.nav-items {
+.fa-bars:before {
   display: none;
 }
 
-.nav-bars {
-  cursor: pointer;
+.profile-wrapper{
+  font-size: 24px;
+  color: rgb(84, 84, 84);
 }
 
-@media screen and (min-width: 700px) {
-  .nav-items {
-    display: flex;
-  }
-  .nav-bars {
+@media screen and (max-width: 769px) {
+  .menu-nav, .profile-wrapper{
     display: none;
   }
-  .profile-button {
-    display: none;
-  }
-}
 
-.nav-profile {
-  display: flex;
+  .header{
+    padding: 30px 10px;
+  }
+
+  .fa-bars{
+    display: block;
+  }
 }
 
 .hero-section {
