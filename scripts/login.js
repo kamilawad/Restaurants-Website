@@ -33,7 +33,7 @@ const validateUserLogin = (username, password) => {
         found = true
 
         if (password === users[i].password) {
-          window.location.href = "./scripts/main.js"
+          window.location.href = "./pages/main.html"
           break
         } else {
           incorrect.classList.remove("hidden")
